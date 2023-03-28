@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    background-color: red;
+    border: 3px solid black;
+
+    /* Using Pixcel  * Bad Practice ***/
+    /* grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 100px 100px ; */
+
+    /* Using 1 fraction = 1/2 of the available space */
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    /* Another way of declaring columns and rows */
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+
+    /* when we need 1st one in pixcel and last one in pixels */
+
+    grid-template-columns: 200px repeat(3,1fr) 100px;
+
+    grid-template-rows: repeat(2,1fr);
+
+
+}
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: 3px solid black;
+}
+.container-2{
+  
+    width: 100%;
+    height: 500px;
+    display: grid;
+    background-color: red;
+    border: 3px solid black;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    
+    gap: 20px; /* creat gap in coloumn and rows*/
+}
+
+.boxFR {
+    /* width: 50px;   */
+    /* height: 80px;  */
+    background-color: blue;
+    border: 3px solid black;
+}
+
+/*
+Using Grid items properties : 
+
+• Grid-Column-Start: It specifies where to start the grid item.
+• Grid-Column-End: It specifies where to end the grid item.
+• Grid-Row-Start: It specifies where to start the grid item.
+• Grid-Row-End: It specifies where to end the grid item.
+ " we should remove given height and width to make it work"
+*/
+
+#box1 { /* box 1 will start filling area from column 1 to coloumn 3rd line : we should remove given width to make it work*/
+    grid-Column-Start: 1;
+    grid-column-end: 3;
+}
+
+#box4 { /* box 4 will start filling area from row 2 to row 5th line : we should remove given height to make it work*/
+    grid-row-start: 2;
+    grid-row-end: 5;
+}

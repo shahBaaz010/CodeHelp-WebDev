@@ -20,12 +20,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
-    /* Another way of declaring columns and rows */
+    /* Another way of declareing columns and rows */
 
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
 
-    /* when we need 1st one in pixcel and last one in pixels */
+    /* when we need 1st one in pixcel and last 1 in pixels */
 
     grid-template-columns: 200px repeat(3,1fr) 100px;
 

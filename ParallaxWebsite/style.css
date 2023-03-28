@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    overflow-x: hidden; /** scrolling x-axies will be banned **/
+    overflow-y: auto;
+    height: 100vh; /** viewport height depends on screen size of user **/
+    perspective: 10px; /** accessing 3d mode with will creat z-axies along with x-axies ,y-axies**/
+    font-family: sans-serif;
+    
+}
+.portfolio-1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d; /** Specifies that child elements will preserve its 3D position **/
+    z-index:-1;  /* This layer will go 1 step backward (-1) */
+}
+
+.back-ground,.for-ground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /** when we resize the browser window, the aspect ratio of the images is preserved **/
+}
+
+.back-ground {
+    transform:translateZ(-40px) scale(5);
+}
+.for-ground {
+    transform: translateZ(-20px) scale(3);
+}
+.portfolio-1 h1 {
+    position: absolute;
+    top:5rem;
+    font-size:10rem;
+    letter-spacing:4px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+/* section parts Starts */
+
+section{
+    background-color: rgb(26, 17, 17);
+    color: aliceblue;
+    padding: 5rem 0;
+}
+
+.secHeading {
+    font-size: 4rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size:1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg { 
+    position: relative; /* because it's the most nearest parent of class"disk" and "disk" class is overlaping on class"bg"*/
+    width: 100%;
+    height: 40rem;
+    background-attachment: fixed; /* image will be fixed at background and will not scroll but content over the image can scroll*/
+    background-position: center; /* keep bg image center*/
+    background-size: cover; /* cover the image fully */
+
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+
+.desc {
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* top/left:50%; means somthing in center */
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    background-color: aliceblue;
+    padding: .5rem 3rem;
+    font-size: 3rem;
+
+}

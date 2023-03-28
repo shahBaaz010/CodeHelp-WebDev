@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100px 1fr 100px;
+    background-color:bisque ;
+    border: 3px solid black;
+    gap: 5px;
+}
+#header,#footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+/* #sidebar,#adbar{
+    grid-row-start: 2;
+    grid-row-end: 3;
+} */
+#contentarea{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.box{
+    background-color: aqua;
+    border: 3px solid black;
+    text-align: center;
+
+}

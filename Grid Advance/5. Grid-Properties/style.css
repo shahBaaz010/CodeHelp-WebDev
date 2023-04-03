@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: blanchedalmond;
+    height: 700px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+
+    /* justify-content work same as flexbox main-X-axies */
+
+    /* justify-content: start; 
+    justify-content:end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+/* align-content/align-items work same as flexbox cross-Y-axies 
+    "align-content" affects the alignment of flex lines within a container, 
+    while "align-items" affects the alignment of individual flex items within the container.
+*/
+
+    align-items: start;
+    align-items: center;
+    align-items: end;
+    align-items: baseline;
+    align-items: stretch;
+   
+    /* Short hand notation :place-items , place-content , place-self */
+
+    justify-items: center;
+    align-items: center;
+    place-items: center; /*short-hand*/
+
+    justify-content: center;
+    align-content: center;
+    place-content: center; /*short-hand*/
+
+}
+.box{
+    background-color: blueviolet;
+    border: 3px solid black;
+}
+#box1{
+    justify-self: flex-start;
+    justify-self: flex-end;
+    justify-self: center;
+}
+#box2{
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+    
+}

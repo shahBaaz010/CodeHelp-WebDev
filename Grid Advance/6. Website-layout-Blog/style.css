@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 500px;
+    width: 516px;
+    border: 3px solid black;
+    background-color: rgb(234, 0, 255);
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 30px 1fr 30px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+    "hd hd"
+    "sb blog"
+    "ft ft";
+
+}
+
+.box{
+    background-color: blue;
+    border: 3px solid white;
+    color: aliceblue;
+    text-align: center;
+}
+#header {
+    grid-area: hd;
+
+}
+#sidebar {
+    grid-area: sb;
+}
+#blog{
+    grid-area: blog;
+}
+#footer{
+    grid-area: ft;
+}

@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-1 {
+
+    background-color: rgb(42, 165, 46);
+    height: 550px;
+    /**Declaring column and rows **/
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 40px 100px 340px 40px;
+    grid-gap: 10px;
+
+    /* giving names to rows and columns  
+    to organize layout like we want using these names */
+
+    grid-template-areas: 
+    "hd" /*1st row name & 1st coloumn*/
+    "mnu"/*2nd row name & 2nd coloumn*/
+    "main"/*3rd row name & 3rd coloumn*/
+    "ft";/*4th row name & 4th coloumn*/
+}
+.box{
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
+    /* height: 100px;
+    width: 100px; */
+    text-align: center;
+}
+/**moving layout by selectig row and column name**/
+#header{
+    grid-area: hd;
+}
+#menubar{
+    grid-area: mnu;
+}
+#content{
+    grid-area:main;
+}
+#footer{
+    grid-area: ft;
+}
+
+
+/* layout-2 */
+.container-2{
+    height: 600px;
+    background-color: rgb(255, 0, 0);
+    display: grid;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 30px 100px 350px 30px;
+    grid-gap: 10px;
+
+    /* giving names to rows and columns */
+
+    grid-template-areas: 
+    "hd hd" /*1st row name & 1st coloumn*/
+    "mnu mnu"/*2nd row name & 2nd coloumn*/
+    "side content"/*3rd row name & 3rd coloumn*/
+    "ft ft";/*4th row name & 4th coloumn*/
+
+}
+  /**moving layout by selectig row and column name**/
+
+  #header-area{
+    grid-area: hd;
+  }
+  #menu-area{
+    grid-area: mnu;
+  }
+  #content-area{
+    grid-area: content;
+  }
+  #side-area{
+    grid-area:side;
+  }
+  #footer-area{
+    grid-area: ft;
+  }
+
+.box-2{
+    background-color: rgb(64, 255, 0);
+    border: 3px solid rgb(0, 0, 0);
+    /* height: 100px;
+    width: 100px; */
+    text-align: center;
+}

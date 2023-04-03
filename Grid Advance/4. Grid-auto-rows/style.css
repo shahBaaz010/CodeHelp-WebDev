@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: blanchedalmond;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    grid-auto-rows: minmax(100px,auto); 
+    /** we use grid-auto-rows when rows are uncountable 
+    and this fuction creat rows auto while scrolling cause  */
+
+    grid-gap: 10px;
+}
+.box{
+    background-color: blueviolet;
+    border: 3px solid black;
+
+}

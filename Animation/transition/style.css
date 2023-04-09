@@ -1,0 +1,49 @@
+.container{
+    background-color: rgb(9, 255, 0);
+    border: 3px solid black;
+    height: 300px;
+    width: 400px;
+    display: flex;
+}
+.box{
+    background-color: darkgoldenrod;
+    border: 3px solid white;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+
+    /* 
+        Syntex :
+    
+        transition: property name duration timing function delay; */
+
+    /* transition: background-color 5s ease 3s; */
+    /* transition: transform 5s ease 3s; */
+    transition: all 5s ease 3s; /** all means all property will work together like (bg-color,transform) **/
+
+    /** 
+        Time Function:
+        
+        ease-in = slow starting 
+        ease-out = slow ending 
+        
+        **/
+
+    transition: transform 2s ease-in; 
+    transition: transform 2s ease-out;
+
+    /**
+        Time function custrom creation "bezier curve expression" from browsers :
+
+        we have to copy 
+    **/
+
+    transition: transform 3s cubic-bezier(0,-0.57, 0.14, 1.28) 1s ;
+
+}
+.box:hover{
+
+    background-color: rgb(212, 0, 255) ;
+    /* transform: rotate(45deg); */
+    transform: translateX(410px) rotate(360deg);
+}

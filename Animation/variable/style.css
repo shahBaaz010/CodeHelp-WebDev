@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /**When we define any varible in (:root) then it's become variable of global scope**/
+    --Dark-green:#005507cc; /**now we can use these variable as global varible and use in any scope we want**/
+}
+
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: blueviolet;
+    border: 3px solid white;
+}
+
+.box{
+    color: white;
+    /* background-color: #45e345; */
+
+    /*Creating color variable in scope of .box*/
+    --light-green:#45e345;
+    background-color:var(--light-green); /**this varible only usable in this scope **/
+    border: 3px solid black;
+}
+
+#box2{
+    background-color: var(--Dark-green); /**Using global variable**/
+}
